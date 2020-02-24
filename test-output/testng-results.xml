@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="2" ignored="0" total="2" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="128433" started-at="2020-02-23T14:14:35Z" finished-at="2020-02-23T14:16:44Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.RunnerIT@402bba4f]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Default test" duration-ms="128433" started-at="2020-02-23T14:14:35Z" finished-at="2020-02-23T14:16:44Z">
+      <class name="runner.RunnerIT">
+        <test-method status="PASS" signature="createProperties()[pri:0, instance:runner.RunnerIT@402bba4f]" name="createProperties" is-config="true" duration-ms="14" started-at="2020-02-23T14:14:35Z" finished-at="2020-02-23T14:14:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProperties -->
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:runner.RunnerIT@402bba4f]" name="setUpClass" is-config="true" duration-ms="138" started-at="2020-02-23T14:14:35Z" finished-at="2020-02-23T14:14:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="FAIL" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.RunnerIT@402bba4f]" name="runScenario" duration-ms="78483" started-at="2020-02-23T14:14:35Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-02-23T14:15:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To Validate links in Selenium Training"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["To validate link and headers in Selenium Training header"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [x1] but found [Module Quiz]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [x1] but found [Module Quiz]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at stepdef.ToolsStepDefinition.user_validates_link_with(ToolsStepDefinition.java:42)
+at ✽.user validates link with ""(file:src/test/resources/features/feat1.feature:10)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="FAIL" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runner.RunnerIT@402bba4f]" name="runScenario" duration-ms="49620" started-at="2020-02-23T14:15:54Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-02-23T14:16:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To Validate links in Selenium Training"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["To validate link and headers in Selenium Training header"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [x1] but found [Module Quiz]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [x1] but found [Module Quiz]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at stepdef.ToolsStepDefinition.user_validates_link_with(ToolsStepDefinition.java:42)
+at ✽.user validates link with ""(file:src/test/resources/features/feat2.feature:10)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:runner.RunnerIT@402bba4f]" name="tearDownClass" is-config="true" duration-ms="76" started-at="2020-02-23T14:16:44Z" finished-at="2020-02-23T14:16:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:runner.RunnerIT@402bba4f]" name="beforeTest" is-config="true" duration-ms="2" started-at="2020-02-23T14:16:44Z" finished-at="2020-02-23T14:16:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+      </class> <!-- runner.RunnerIT -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
