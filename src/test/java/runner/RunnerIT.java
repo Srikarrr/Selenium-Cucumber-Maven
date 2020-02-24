@@ -4,17 +4,13 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Properties;
-
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterSuite;
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 import stepdef.Hooks;
- ;
+ 
 
 @CucumberOptions(glue = "stepdef", features = "src/test/resources/features/", tags = "@Regression")
 public class RunnerIT extends AbstractTestNGCucumberTests {
