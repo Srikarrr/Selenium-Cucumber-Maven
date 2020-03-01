@@ -1,4 +1,5 @@
 props ='initial_value'
+var='ini'
 pipeline {
 agent any
  stages {
@@ -12,12 +13,12 @@ agent any
      }
     stage('two') {
       steps {
-       echo props['failedtestcases'] 
+       var = props['failedtestcases'] 
       }
     }
      stage ('Build') {
             steps {
-                sh 'mvn -Dmaven.test.failure.ignore=true clean install test -Dcucumber.options="--tags ${props['failedtestcases']}"' 
+                sh 'mvn clean install test -Dcucumber.options="--tags ${var}"' 
             }
       }
    }
