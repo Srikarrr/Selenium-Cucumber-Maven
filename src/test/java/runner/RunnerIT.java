@@ -28,7 +28,7 @@ public class RunnerIT extends AbstractTestNGCucumberTests {
 			for (int i = 0; i < Hooks.failedcases.size(); i++) {
 				s = s + Hooks.failedcases.get(i)+" "+"or"+" ";
 			}
-			s = s.substring(0, s.length() - 2);
+			s = s.substring(0, s.length() - 3).trim();
 			try (OutputStream output = new FileOutputStream(
 					System.getProperty("user.dir") + File.separator + "failedtestcases.properties")) {
 				Properties prop = new Properties();
