@@ -22,12 +22,7 @@ public class Hooks {
 	@Before
 	public void beforeScenario() throws FileNotFoundException {
 		System.out.println("This is before sceanrio");
-		file = new File(System.getProperty("user.dir") + File.pathSeparator + "failedtestcases.properties");
-		if (!file.exists())
-			file.mkdir();
-
-	}
-
+	 }
 	@After
 	public void afterScenario(Scenario scn) {
 		System.out.println("This is after sceanrio");
