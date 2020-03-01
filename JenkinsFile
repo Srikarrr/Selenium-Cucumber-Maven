@@ -1,3 +1,4 @@
+props ='initial_value'
 pipeline {
 agent any
 stages {
@@ -5,8 +6,9 @@ stages {
      steps{
       script{
       def d = [test: 'Default', something: 'Default', other: 'Default']
-      def props = readProperties defaults: d, file: 'failedtestcases.properties', text: 'other=Override'
-      echo props['failedtestcases']  
+      props = readProperties defaults: d, file: 'failedtestcases.properties', text: 'other=Override'
+      echo props['failedtestcases'] 
+      clean install test -Dcucumber.options="--tags @Regression" 
       }
        }
      }
