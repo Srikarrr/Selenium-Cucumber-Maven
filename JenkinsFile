@@ -21,8 +21,10 @@ agent any
       }
     }
      stage ('Build') {
+     steps{
      script{
        bat 'mvn clean install test -Dcucumber.options="--tags ${var}"' 
+       }
        }
        }
    }
