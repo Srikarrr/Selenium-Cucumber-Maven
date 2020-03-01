@@ -4,9 +4,11 @@ stages {
        stage ('Testing Stage'){
      steps{
       withMaven(maven : 'maven-3.6.3')
+      script{
       def d = [test: 'Default', something: 'Default', other: 'Default']
       def props = readProperties defaults: d, file: 'failedtestcases.properties', text: 'other=Override'
       echo props['failedtestcases']  
+      }
        }
      }
     
