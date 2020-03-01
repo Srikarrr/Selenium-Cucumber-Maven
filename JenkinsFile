@@ -15,13 +15,14 @@ agent any
       steps {
       script{
        var = props['failedtestcases'] 
-       echo ${var}
+       
        }
+       echo ${var}
       }
     }
      stage ('Build') {
             steps {
-                bat 'mvn clean install test -Dcucumber.options="--tags ${var}"' 
+                bat 'mvn clean install test -Dcucumber.options="--tags "${var}""' 
             }
       }
    }
