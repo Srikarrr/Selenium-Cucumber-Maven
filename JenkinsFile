@@ -13,7 +13,9 @@ agent any
      }
     stage('two') {
       steps {
+      script{
        var = props['failedtestcases'] 
+       }
       }
     }
      stage ('Build') {
