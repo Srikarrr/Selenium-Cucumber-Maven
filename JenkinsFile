@@ -19,7 +19,7 @@ agent any
        thirdvar=${var}
         }
         echo "${var}"
-        bat 'mvn clean install test -Dcucumber.options="--tags ${thirdvar}"'  
+        bat "mvn clean install test -Dcucumber.options=${var}"  
         }
     }
      
