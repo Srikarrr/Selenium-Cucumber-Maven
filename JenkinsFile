@@ -7,12 +7,14 @@ stages {
       script{
       def d = [test: 'Default', something: 'Default', other: 'Default']
       props = readProperties defaults: d, file: 'failedtestcases.properties', text: 'other=Override'
-      echo props['failedtestcases'] 
-      clean install test -Dcucumber.options="--tags @Regression" 
+      
       }
        }
      }
-    
-     }
-  
-}
+    stage('two') {
+      steps {
+       echo props['failedtestcases'] 
+      }
+    }
+   }
+ }
