@@ -1,5 +1,5 @@
 props ='initial_value'
-var='ini'
+var ='ini'
 pipeline {
 agent any
  stages {
