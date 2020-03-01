@@ -1,5 +1,5 @@
-def props ='initial_value'
-def var ='ini'
+def props ="initial_value"
+def var ="ini"
 pipeline {
 agent any
  stages {
@@ -15,10 +15,9 @@ agent any
       steps {
       script{
        var = props['failedtestcases'] 
-       
-       }
-       echo "${var}"
-       bat 'mvn clean install test -Dcucumber.options="--tags "%var%""'  
+        }
+       echo ${var}
+       bat 'mvn clean install test -Dcucumber.options="--tags ${var}"'  
        
       }
     }
