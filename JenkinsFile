@@ -1,14 +1,17 @@
 props ='initial_value'
 pipeline {
 agent any
-stages {
+tools {
+        maven 'Maven 3.6.3'
+        jdk 'jdk8'
+    }
+ stages {
        stage ('Testing Stage'){
      steps{
       script{
       def d = [test: 'Default', something: 'Default', other: 'Default']
       props = readProperties defaults: d, file: 'failedtestcases.properties', text: 'other=Override'
-      
-      }
+       }
        }
      }
     stage('two') {
@@ -16,5 +19,10 @@ stages {
        echo props['failedtestcases'] 
       }
     }
+     stage ('Build') {
+            steps {
+                sh 'mvn -Dmaven.test.failure.ignore=true clean install test -Dcucumber.options="--tags ${props['failedtestcases']}"' 
+            }
+      }
    }
  }
