@@ -18,7 +18,7 @@ agent any
        
        }
        echo "${var}"
-       bat 'mvn clean install test -Dcucumber.options="--tags echo ${var}"' 
+       bat 'mvn clean install test -Dcucumber.options="--tags %var%"'  
        
       }
     }
